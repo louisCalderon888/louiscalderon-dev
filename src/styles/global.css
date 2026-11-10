@@ -9,6 +9,7 @@
   --wa-hover: #185a3b;
   --wa-ink: #f0faf5;
   --ok: #1f7a4d;
+  --no-ink: #9b2c2c;
   --th-bg: #f5efe6;
   --callout-bg: #fdf6ee;
   --callout-line: #e8d8c0;
@@ -96,7 +97,7 @@ th { background: var(--th-bg); font-size: 0.85rem; }
 tr:last-child td { border-bottom: none; }
 td.date { color: var(--muted); font-size: 0.8rem; }
 td.si { color: var(--ok); font-weight: 600; }
-td.no { color: #9b2c2c; font-weight: 600; }
+td.no { color: var(--no-ink); font-weight: 600; }
 
 .callout {
   background: var(--callout-bg); border: 1px solid var(--callout-line);
