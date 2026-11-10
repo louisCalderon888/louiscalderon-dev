@@ -3,15 +3,15 @@ import Base from "../../layouts/Base.astro";
 import { waLink } from "../../lib/site";
 ---
 <Base title="Matriz de compatibilidad de fondeos | Louis Calderón"
-  description="¿Qué firma de fondeo permite bots, en qué fase, y qué prohíbe? Apex, Topstep, TradeDay — verificado con fecha y fuente. Confirma con la firma antes de comprar tu challenge.">
+  description="¿Qué firma de fondeo permite bots, en qué fase, y qué prohíbe? Verificado contra documentación oficial. Confirma con la firma antes de comprar tu challenge.">
   <section class="block">
     <div class="wrap">
       <p class="kicker">Antes de pagar tu challenge</p>
       <h1>¿Qué fondeo permite qué?</h1>
       <p class="lead" style="margin-top:16px">
         La regla más cara del trading con fondeos es la que no leíste. Esta matriz resume
-        qué permite cada firma con bots automatizados — en evaluación y en cuenta
-        fondeada. Compártela con quien la necesite.
+        qué permite cada firma con bots automatizados — verificado contra sus reglamentos
+        y help centers oficiales. Compártela con quien la necesite.
       </p>
     </div>
   </section>
@@ -20,51 +20,48 @@ import { waLink } from "../../lib/site";
     <div class="wrap">
       <table>
         <tr>
-          <th>Firma</th><th>Bots en evaluación</th><th>Bots en cuenta fondeada</th>
+          <th>Firma</th><th>Bots en evaluación</th><th>Bots en fondeada</th>
           <th>Copy-trading</th><th>Verificado</th>
+        </tr>
+        <tr>
+          <td><strong>Lucid</strong></td>
+          <td class="si">SÍ — automatización completa + copiers</td>
+          <td class="si">SÍ — automatización completa</td>
+          <td class="si">Permitido</td>
+          <td class="date">2026-11-10 · help center oficial¹</td>
         </tr>
         <tr>
           <td><strong>Apex</strong></td>
           <td class="si">Sí — automatización completa</td>
-          <td class="no">PROHIBIDA la automatización completa en Performance Accounts; solo semi-automático (stops/trailing sobre posición abierta manual)</td>
+          <td class="no">SOLO semi-automático (manual entry + gestión automatizada)</td>
           <td class="no">Prohibido</td>
-          <td class="date">2026-11-08 · fuente secundaria¹</td>
+          <td class="date">2026-11-10 · fuentes secundarias²</td>
         </tr>
         <tr>
-          <td><strong>Topstep</strong></td>
-          <td class="si">Sí</td>
-          <td>Reglas distintas a la evaluación — trailing ajusta al cierre del día; verificar cuenta activa</td>
-          <td class="no">Prohibido</td>
-          <td class="date">2026-11-08 · fuente secundaria¹</td>
-        </tr>
-        <tr>
-          <td><strong>TradeDay</strong></td>
-          <td class="si">Sí</td>
-          <td class="si">Sí</td>
-          <td>Según reglas vigentes</td>
-          <td class="date">2026-11-08 · fuente secundaria¹</td>
-        </tr>
-      </table>
-
-        <tr>
-          <td><strong>MyFundedFutures</strong></td>
-          <td>—</td><td>—</td><td>—</td>
-          <td class="date">verificación en curso</td>
+          <td><strong>MFFU</strong></td>
+          <td>SEMI-AUTO solo — monitoreo activo requerido; full-auto prohibido; HFT prohibido</td>
+          <td>SEMI-AUTO — mismas reglas; HFT (>200 trades/día) prohibido</td>
+          <td>Permitido (con monitoreo)</td>
+          <td class="date">2026-11-10 · política oficial³</td>
         </tr>
         <tr>
           <td><strong>TakeProfitTrader</strong></td>
-          <td>—</td><td>—</td><td>—</td>
-          <td class="date">verificación en curso</td>
+          <td class="no">NO — "no bots de ningún tipo" (Test/PRO/PRO+)</td>
+          <td class="no">NO — todo trade debe ser ejecutado manualmente</td>
+          <td>Solo copiers aprobados oficialmente</td>
+          <td class="date">2026-11-10 · help center oficial⁴</td>
         </tr>
         <tr>
-          <td><strong>Lucid</strong></td>
-          <td>—</td><td>—</td><td>—</td>
-          <td class="date">verificación en curso</td>
+          <td><strong>e8 (Futures)</strong></td>
+          <td class="no">NO — semi y full-auto prohibidos</td>
+          <td class="no">NO</td>
+          <td class="no">Prohibido</td>
+          <td class="date">2026-11-10 · help center oficial⁵</td>
         </tr>
         <tr>
-          <td><strong>e8 Markets</strong></td>
-          <td colspan="3">Opera forex/cripto (MT4/MT5 y otros) — fuera de NinjaTrader; verificar la plataforma compatible</td>
-          <td class="date">verificación en curso</td>
+          <td><strong>e8 (Forex/Crypto)</strong></td>
+          <td colspan="3">Plataforma MT4/MT5/TradeLocker — fuera de NinjaTrader; verificar política de EAs por producto</td>
+          <td class="date">2026-11-10 · inconsistentes⁶</td>
         </tr>
       </table>
 
@@ -73,16 +70,44 @@ import { waLink } from "../../lib/site";
         su fecha de verificación. Antes de comprar tu challenge, <strong>confirma la
         regla vigente con la propia firma</strong> — te ayudo a leer el reglamento si quieres.
         <br /><br />
-        ¹ Fuentes secundarias consultadas el 2026-11-08 (blog.pickmytrade.io,
-        clearedge.trading, hyrotrader.com). Verificación directa contra los reglamentos
-        oficiales de cada firma: <strong>en curso</strong> — esta página se actualiza al terminar.
+        ¹ <a href="https://support.lucidtrading.com/en/articles/11404728-other-trading-activities" rel="noopener">Lucid: Other Trading Activities</a> — "Automated trading systems and trade copiers are permitted"
+        <br />² <a href="https://blog.pickmytrade.io/5-prop-firm-automation-rules-before-you-run-a-bot-2026" rel="noopener">PickMyTrade</a> + <a href="https://www.clearedge.trading/post/prop-firm-automation-ftmo-apex-topstep-rules" rel="noopener">ClearEdge</a>
+        <br />³ <a href="https://blog.traderspost.io/article/automate-my-funded-futures-with-traderspost" rel="noopener">TradersPost (mar 2026)</a> — "MFFU permits semi-automated trading only. Fully automated set-and-forget strategies are prohibited."
+        <br />⁴ <a href="https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules" rel="noopener">TPT Help Center: PRO Account Rules</a> — "We do not allow any automated or bot trading of any kind."
+        <br />⁵ <a href="https://helpfutures.e8markets.com/en/articles/10209270-trading-policies-and-prohibited-trading-strategies" rel="noopener">E8 Futures: Prohibited Strategies</a> — "Semi-Automated or Fully-Automated Trading... prohibited"
+        <br />⁶ <a href="https://xaubot.com/prop-firm-ea-rules" rel="noopener">XAUBOT</a> — "Reported inconsistently, verify directly"
       </div>
     </div>
   </section>
 
   <section class="block">
+    <div class="wrap">
+      <p class="kicker">Traducción práctica</p>
+      <h2>Qué significa para tu bot</h2>
+      <div class="grid three" style="margin-top:18px">
+        <div class="card">
+          <h3>Tier A — full-auto</h3>
+          <p style="font-size:0.92rem">Lucid: el bot entra y gestiona solo, sin supervisión humana activa. Copiers también permitidos.</p>
+        </div>
+        <div class="card">
+          <h3>Tier B — semi-auto</h3>
+          <p style="font-size:0.92rem">Apex (fondata) y MFFU: el bot puede operar pero requiere monitoreo activo o entrada manual del trader. La gestión automatizada (ATM, trailing) está permitida.</p>
+        </div>
+        <div class="card">
+          <h3>Tier C — manual</h3>
+          <p style="font-size:0.92rem">TakeProfitTrader y e8 Futures: bots prohibidos completamente. Todo trade debe ser ejecutado manualmente por el trader.</p>
+        </div>
+      </div>
+      <p class="evidence-note" style="margin-top:14px">
+        Tu sistema se calibra al tier de tu firma antes de instalar — o te digo cuál firma
+        es compatible con tu setup antes de que compres.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
     <div class="wrap" style="text-align:center">
-      <p class="kicker">Tu fondeo no está en la tabla?</p>
+      <p class="kicker">¿Tu fondeo no está en la tabla?</p>
       <h2>Mándamela y la verifico</h2>
       <p class="lead" style="margin:14px auto 22px">
         Dime con qué firma estás (o cuál piensas comprar) y te digo si tu sistema es
