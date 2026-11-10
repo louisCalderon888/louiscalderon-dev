@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-10",
+  "url": "http://127.0.0.1:4321",
+  "healthScore": 100,
+  "healthScorePreFix": 98,
+  "issues": [
+    { "id": "ISSUE-001", "title": "Footer linkea placeholder de portfolio (dominio invalido) en las 5 paginas", "severity": "medium", "category": "Links", "fixStatus": "verified", "files": ["src/layouts/Base.astro"], "commit": "bc3a6f8" },
+    { "id": "ISSUE-002", "title": "Typo 'POR QUE EXISTS ESTO' en kicker de home", "severity": "low", "category": "Content", "fixStatus": "deferred", "reason": "tier Standard no arregla Low/cosmetico" }
+  ],
+  "categoryScores": { "console": 100, "links": 100, "visual": 100, "functional": 100, "ux": 100, "content": 97 },
+  "coverageProvisional": ["performance", "accessibility"]
+}

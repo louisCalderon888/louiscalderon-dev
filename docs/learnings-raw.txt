@@ -1,0 +1,20 @@
+LEARNINGS: 6 loaded (2 architectures, 3 operationals, 1 tool)
+
+## Architectures
+- [hub-cutover-complete] (confidence: 10/10, observed, 2026-11-10)
+  louiscalderon.dev sirve el hub de trading desde Cloudflare Workers (assets estaticos desde dist/); portfolio general queda pendiente en URL Framer aparte (D21) (files: wrangler.jsonc, src/lib/site.ts)
+- [prop-firm-automation-tiers] (confidence: 9/10, observed, 2026-11-10)
+  Verificación T3 contra help centers oficiales: Lucid=full-auto permitido; MFFU=semi-auto SOLO con monitoreo activo (full-auto prohibido); TPT=NO bots de ningún tipo en Test/PRO/PRO+ (help center oficial zendesk); e8 Futures=NO bots (help center oficial). La oferta del hub usa three tiers (A full-auto=Lucid / B semi-auto=MFFU-Apex / C manual=TPT-e8), no dos como se planeó originalmente (files: src/pages/ninjatrader/matriz.astro, src/pages/ninjatrader/index.astro)
+
+## Operationals
+- [use-git-bash-for-gstack-on-this-host] (confidence: 10/10, observed, 2026-11-09)
+  El bash por defecto del agente en este equipo es WSL y rompe gstack (HOME=/home/louisc, sin bun, /c/Users inexistente); correr los binarios via Git Bash (C:/Program Files/Git/bin/bash.exe) donde bun 1.4.4 resuelve bun y HOME resuelve el state root Windows
+- [browse-path-sandbox] (confidence: 9/10, observed, 2026-11-10)
+  El browse.exe solo permite screenshot/escritura dentro de C:\Users\<user>\AppData\Local\Temp y el working dir del agente; permitir goto file:// solo en esos paths — renderizar desde Temp y copiar el PNG fuera con bash (files: browse/dist/browse.exe)
+- [bun-1313-crashes-gstack] (confidence: 9/10, observed, 2026-10-24)
+  gstack v1.91 helpers crash under Bun 1.3.13 on Windows with panic: start index 1 is larger than end index 0. Run gstack tooling with Bun 1.4.3 or newer on PATH.
+
+## Tools
+- [bin-scripts-run-with-bun-not-bash] (confidence: 9/10, observed, 2026-11-10)
+  Los helpers TypeScript de bin/ (p.ej. gstack-plan-reality) tienen shebang bun; ejecutar con: bun bin/<helper> — no bash bin/<helper> que explota en sintaxis
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boceto — Hub NinjaTrader / louiscalderon.dev</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #333; background: #fafafa; line-height: 1.5; max-width: 900px; margin: 0 auto; padding: 24px; }
+  .sketch-note { border: 1px dashed #999; padding: 8px 12px; font-size: 12px; color: #666; margin-bottom: 24px; }
+  section { border: 1px solid #bbb; margin-bottom: 24px; padding: 20px; background: #fff; }
+  h1 { font-size: 26px; margin-bottom: 8px; }
+  h2 { font-size: 18px; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  h3 { font-size: 14px; margin-bottom: 6px; }
+  p, li { font-size: 14px; }
+  .sub { color: #555; font-size: 15px; margin-bottom: 16px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .box { border: 1px solid #ccc; padding: 14px; }
+  .placeholder { border: 1px dashed #aaa; background: #f0f0f0; padding: 20px; text-align: center; color: #888; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+  th { background: #eee; }
+  .cta { display: inline-block; border: 2px solid #333; padding: 10px 24px; font-size: 15px; text-decoration: none; color: #333; }
+  .small { font-size: 12px; color: #777; }
+  .tag { display: inline-block; border: 1px solid #999; padding: 2px 8px; font-size: 11px; margin-right: 6px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  .hand { font-style: italic; color: #666; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div class="sketch-note">
+  [BOCETO — Página 1 de 3: OFERTA. Es la fase 1 del hub, lo que publica primero.
+  Las páginas 2 (Matriz de Compliance) y 3 (Edge Report) van abajo en miniatura.]
+</div>
+
+<section>
+  <div class="tag">louiscalderon.dev / NinjaTrader</div>
+  <h1>Ingeniería para cuentas de fondeo</h1>
+  <p class="sub">Sistemas automatizados backtesteados, calibrados a las reglas exactas de tu fondeo,
+  con límites de riesgo pactados <strong>antes</strong> de que pagues.</p>
+  <a href="#" class="cta">Cotiza por WhatsApp →</a>
+  <p class="small" style="margin-top:10px;">Entrega en días. Precio fijo por encargo. Sin promesa de resultado — con especificación.</p>
+</section>
+
+<section>
+  <h2>Evidencia</h2>
+  <div class="grid2">
+    <div class="box">
+      <h3>Operativa en vivo (mi cuenta)</h3>
+      <div class="placeholder">[Fase 1: captura estática con fecha · Fase 3: widget alimentado por export diario desde el VPS]</div>
+      <p class="small">Actualizado [fecha]. Primera parte: verificación, no promesa.</p>
+    </div>
+    <div class="box">
+      <h3>Caso de cliente</h3>
+      <p>"Configuré todo en su VPS — NT8, los bots. Me escribió cuando vio
+      <strong>$2,000 USD</strong> en su cuenta de fondeo."</p>
+      <p class="small">Resultado de un cliente. Pasado, no garantía. Publicado con su consentimiento escrito.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Lo que pactamos antes de que pagues</h2>
+  <ul>
+    <li><strong>Drawdown máximo</strong> — según backtest, con validación out-of-sample</li>
+    <li><strong>Rachas perdedoras esperadas</strong></li>
+    <li><strong>Cadencia de reportes</strong> — sabes qué pasa sin mirar la pantalla</li>
+    <li><strong>Reglas de kill-switch</strong> — pactadas por escrito</li>
+  </ul>
+  <p class="hand" style="margin-top:10px;">"Si una racha perdedora normal te hace apagar el bot en la semana 2, esto no es para ti."</p>
+</section>
+
+<section>
+  <h2>Cómo trabajamos</h2>
+  <div class="grid3">
+    <div class="box">
+      <h3>1. Encargo puntual</h3>
+      <p class="small">Tu estrategia o indicador en NinjaScript</p>
+      <ul><li>Precio fijo, entrega en días</li><li>Portado de TradingView / MT4</li><li>Código fuente incluido</li></ul>
+    </div>
+    <div class="box">
+      <h3>2. Sistema + VPS ★</h3>
+      <p class="small">Lo que compran tus clientes</p>
+      <ul><li>Backtest sobre las reglas de TU fondeo</li><li>Límites de riesgo configurados</li><li>Instalado y verificado en tu VPS</li><li>Hoja de especificaciones entregada</li></ul>
+    </div>
+    <div class="box">
+      <h3>3. Acompañamiento</h3>
+      <p class="small">Para cuentas fondeadas activas</p>
+      <ul><li>Monitoreo y reportes</li><li>Ajustes de parámetros</li><li>Soporte cuando algo falla</li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>¿Qué fondeo permite qué? <span class="small">→ ver matriz completa</span></h2>
+  <table>
+    <tr><th>Firma</th><th>Bots en evaluación</th><th>Bots en cuenta fondata</th><th>Copy-trading</th></tr>
+    <tr><td>Apex</td><td>Sí (auto completa)</td><td>NO — solo semi-auto</td><td>Ban</td></tr>
+    <tr><td>Topstep</td><td>Sí</td><td>Reglas distintas</td><td>Ban</td></tr>
+    <tr><td>TradeDay</td><td>Sí</td><td>Sí</td><td>Según reglas</td></tr>
+  </table>
+  <p class="small">Verificado: [fecha + URL de la fuente por fila] · Confirma con la firma antes de comprar tu challenge.</p>
+</section>
+
+<section>
+  <h2>Edge Report <span class="small">→ ver formato completo</span></h2>
+  <table>
+    <tr><th>Sistema</th><th>Pass rate (OOS*)</th><th>DD máx</th><th>Profit factor</th><th>Muestra</th></tr>
+    <tr><td>[STC-ORB]</td><td>[68%]</td><td>[4.2%]</td><td>[1.4]</td><td>[250 trades]</td></tr>
+  </table>
+  <p class="small">[Números ilustrativos — solo OOS/walk-forward. Sin número real, esta tabla no se publica.]</p>
+</section>
+
+<section style="text-align:center;">
+  <h2>Cotiza tu sistema</h2>
+  <p class="sub">Cuéntame tu fondeo y tu objetivo. Te digo si es compatible antes de que compres el challenge.</p>
+  <a href="#" class="cta">WhatsApp →</a>
+</section>
+
+</body>
+</html>
