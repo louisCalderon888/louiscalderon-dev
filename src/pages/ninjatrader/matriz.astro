@@ -1,0 +1,72 @@
+---
+import Base from "../../layouts/Base.astro";
+import { waLink } from "../../lib/site";
+---
+<Base title="Matriz de compatibilidad de fondeos | Louis Calderón"
+  description="¿Qué firma de fondeo permite bots, en qué fase, y qué prohíbe? Apex, Topstep, TradeDay — verificado con fecha y fuente. Confirma con la firma antes de comprar tu challenge.">
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">Antes de pagar tu challenge</p>
+      <h1>¿Qué fondeo permite qué?</h1>
+      <p class="lead" style="margin-top:16px">
+        La regla más cara del trading con fondeos es la que no leíste. Esta matriz resume
+        qué permite cada firma con bots automatizados — en evaluación y en cuenta
+        fondata. Compártela con quien la necesite.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <table>
+        <tr>
+          <th>Firma</th><th>Bots en evaluación</th><th>Bots en cuenta fondata</th>
+          <th>Copy-trading</th><th>Verificado</th>
+        </tr>
+        <tr>
+          <td><strong>Apex</strong></td>
+          <td class="si">Sí — automatización completa</td>
+          <td class="no">PROHIBIDA la automatización completa en Performance Accounts; solo semi-automático (stops/trailing sobre posición abierta manual)</td>
+          <td class="no">Prohibido</td>
+          <td class="date">2026-11-08 · fuente secundaria¹</td>
+        </tr>
+        <tr>
+          <td><strong>Topstep</strong></td>
+          <td class="si">Sí</td>
+          <td>Reglas distintas a la evaluación — trailing ajusta al cierre del día; verificar cuenta activa</td>
+          <td class="no">Prohibido</td>
+          <td class="date">2026-11-08 · fuente secundaria¹</td>
+        </tr>
+        <tr>
+          <td><strong>TradeDay</strong></td>
+          <td class="si">Sí</td>
+          <td class="si">Sí</td>
+          <td>Según reglas vigentes</td>
+          <td class="date">2026-11-08 · fuente secundaria¹</td>
+        </tr>
+      </table>
+
+      <div class="callout" style="margin-top:20px">
+        <strong>Descargo:</strong> las firmas cambian reglas sin aviso. Cada fila lleva
+        su fecha de verificación. Antes de comprar tu challenge, <strong>confirma la
+        regla vigente con la propia firma</strong> — te ayudo a leer el reglamento si quieres.
+        <br /><br />
+        ¹ Fuentes secundarias consultadas el 2026-11-08 (blog.pickmytrade.io,
+        clearedge.trading, hyrotrader.com). Verificación directa contra los reglamentos
+        oficiales de cada firma: <strong>en curso</strong> — esta página se actualiza al terminar.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">Tu fondeo no está en la tabla?</p>
+      <h2>Mándamela y la verifico</h2>
+      <p class="lead" style="margin:14px auto 22px">
+        Dime con qué firma estás (o cuál piensas comprar) y te digo si tu sistema es
+        compatible — antes de que pagues.
+      </p>
+      <a class="btn" href={waLink}>WhatsApp →</a>
+    </div>
+  </section>
+</Base>

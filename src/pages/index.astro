@@ -1,0 +1,71 @@
+---
+import Base from "../layouts/Base.astro";
+import { waLink } from "../lib/site";
+---
+<Base title="Ingeniería para cuentas de fondeo — Louis Calderón">
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">NinjaTrader 8 · Trading algorítmico</p>
+      <h1>Ingeniería para<br />cuentas de fondeo</h1>
+      <p class="lead" style="margin-top:18px">
+        Sistemas automatizados backtesteados, calibrados a las reglas exactas de tu
+        firma de fondeo, con límites de riesgo pactados <strong>antes</strong> de que pagues.
+      </p>
+      <p style="margin-top:26px; display:flex; gap:14px; flex-wrap:wrap">
+        <a class="btn" href={waLink}>Cotiza por WhatsApp</a>
+        <a class="btn ghost" href="/ninjatrader/">Ver la oferta</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">Por qué exists esto</p>
+      <h2>La evaluación no se falla por el mercado.<br />Se falla por las reglas.</h2>
+      <p class="lead" style="margin-top:14px">
+        Cerca del 90% de los challenges se revientan por gestión: drawdown que se pasa,
+        consistencia que se rompe, lotaje que se dispara. Un sistema automatizado no se
+        aburre, no hace revenge trading y respeta los límites que tú le configuras.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">Evidencia</p>
+      <div class="grid two">
+        <div class="card">
+          <h3>Operativa en vivo</h3>
+          <p>Mi propia operativa corre 24/7 en un VPS con los sistemas que construyo. La curva se publica aquí — verificación, no promesa.</p>
+          <p class="evidence-note">Curva y drawdown actual vs. límite: se publica con la fase de evidencia viva. Primera parte: lo que ves es medido, no prometido.</p>
+        </div>
+        <div class="card">
+          <h3>Caso de cliente</h3>
+          <p>"Le configuré todo en su VPS — NinjaTrader 8 y los bots. Me escribió por WhatsApp cuando vio <strong>2.000 USD</strong> de ganancia en su cuenta de fondeo."</p>
+          <p class="evidence-note">Resultado de un cliente real, publicado con su consentimiento. Pasado, no garantía.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">Antes de comprar tu challenge</p>
+      <h2>¿Tu fondeo permite bots?</h2>
+      <p class="lead" style="margin-top:14px">
+        No todas las firmas — y no en todas las fases. La <a href="/ninjatrader/matriz/">matriz de compatibilidad</a> te dice qué permite cada una antes de que pagues un peso.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">Cotiza tu sistema</p>
+      <h2>Cuéntame tu fondeo y tu objetivo</h2>
+      <p class="lead" style="margin:14px auto 22px">
+        Te digo si es compatible antes de que compres el challenge. Precio fijo por encargo, entrega en días.
+      </p>
+      <a class="btn" href={waLink}>WhatsApp →</a>
+    </div>
+  </section>
+</Base>

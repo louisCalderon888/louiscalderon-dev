@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import { waLink, PORTFOLIO_URL } from "../lib/site";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const {
+  title,
+  description = "Ingeniería para cuentas de fondeo: sistemas automatizados backtesteados y calibrados a las reglas exactas de tu firma de trading. Instalado en tu VPS, con límites de riesgo pactados antes de pagar.",
+} = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_ES" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/">Louis Calderón</a>
+        <nav>
+          <a href="/ninjatrader/">Oferta</a>
+          <a href="/ninjatrader/matriz/">Matriz de fondeos</a>
+          <a href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span>© {new Date().getFullYear()} Louis Calderón — Ingeniería para cuentas de fondeo.</span>
+        <span>
+          <a href={waLink} rel="noopener">WhatsApp</a>
+          &nbsp;·&nbsp;
+          <a href={PORTFOLIO_URL} rel="noopener">Portfolio general de desarrollo</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

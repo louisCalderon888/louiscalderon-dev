@@ -1,0 +1,55 @@
+---
+import Base from "../../layouts/Base.astro";
+import { waLink } from "../../lib/site";
+---
+<Base title="Edge Report — ventaja estadística con número | Louis Calderón"
+  description="La hoja de especificaciones de cada sistema: pass rate validado fuera de muestra, drawdown máximo, profit factor y tamaño de muestra. Sin número real, no se publica.">
+  <section class="block">
+    <div class="wrap">
+      <p class="kicker">Ventaja estadística, con número</p>
+      <h1>Edge Report</h1>
+      <p class="lead" style="margin-top:16px">
+        "Ventaja estadística" sin número es adorno. Cada sistema que vendo lleva esta
+        hoja — y solo se publica con validación fuera de muestra (walk-forward).
+        Un pass rate optimizado sobre los mismos datos del examen no predice nada.
+      </p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>Qué contiene cada reporte</h2>
+      <table style="margin-top:18px">
+        <tr><th>Campo</th><th>Qué significa</th></tr>
+        <tr><td><strong>Pass rate (OOS)</strong></td><td>Cuántas veces pasa las reglas de una firma nombrada, medido sobre datos que NO se usaron para optimizar.</td></tr>
+        <tr><td><strong>Drawdown máximo</strong></td><td>La peor caída que el backtest muestra, con el límite de la firma al lado.</td></tr>
+        <tr><td><strong>Profit factor</strong></td><td>Ganancia acumulada dividida por pérdida acumulada. Por encima de 1 = el sistema gana más de lo que pierde.</td></tr>
+        <tr><td><strong>Tamaño de muestra</strong></td><td>Cuántos trades sostienen el número. Sin muestra suficiente, no hay conclusión — no se publica.</td></tr>
+        <tr><td><strong>Reglas evaluadas</strong></td><td>Profit target, drawdown (trailing o estático), consistencia, noticias, lotaje — las de una firma concreta, no genéricas.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="callout">
+        <strong>Estado:</strong> el primer Edge Report está en curso — requiere correr
+        la validación walk-forward del sistema insignia. Aquí no se publica un número
+        ilustrativo: sin validación fuera de muestra, la tabla queda vacía. Eso es parte
+        del trato.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">¿Tienes un sistema sin validar?</p>
+      <h2>Te lo reviso con este formato</h2>
+      <p class="lead" style="margin:14px auto 22px">
+        Si ya tienes estrategia o indicadores, te digo qué evidencia falta para saber si
+        tiene ventaja real — antes de que gastes el challenge.
+      </p>
+      <a class="btn" href={waLink}>WhatsApp →</a>
+    </div>
+  </section>
+</Base>
