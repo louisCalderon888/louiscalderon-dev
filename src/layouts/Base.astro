@@ -25,20 +25,22 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f7a4d'/%3E%3Cpath d='M8 22 L14 15 L18 18 L24 10' stroke='%23faf7f2' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   </head>
   <body>
+    <a class="skip" href="#main">Saltar al contenido</a>
     <header class="site">
       <div class="wrap">
         <a class="brand" href="/">Louis Calderón</a>
         <nav>
-          <a href="/ninjatrader/">Oferta</a>
-          <a href="/ninjatrader/matriz/">Matriz de fondeos</a>
-          <a href="/contacto/">Contacto</a>
+          <a href="/ninjatrader/" aria-current={Astro.url.pathname === '/ninjatrader/' ? 'page' : undefined}>Oferta</a>
+          <a href="/ninjatrader/matriz/" aria-current={Astro.url.pathname.startsWith('/ninjatrader/matriz') ? 'page' : undefined}>Matriz de fondeos</a>
+          <a href="/contacto/" aria-current={Astro.url.pathname === '/contacto/' ? 'page' : undefined}>Contacto</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <slot />
     </main>
 
