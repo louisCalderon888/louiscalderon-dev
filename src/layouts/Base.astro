@@ -2,6 +2,10 @@
 import "../styles/global.css";
 import { waLink, PORTFOLIO_URL } from "../lib/site";
 
+// Regression: ISSUE-001 — placeholder portfolio link site-wide (footer)
+// Found by /qa on 2026-11-10. Render link only when PORTFOLIO_URL is real.
+const PORTFOLIO_LIVE = PORTFOLIO_URL && !/poner/i.test(PORTFOLIO_URL);
+
 interface Props {
   title: string;
   description?: string;
@@ -43,8 +47,12 @@ const {
         <span>© {new Date().getFullYear()} Louis Calderón — Ingeniería para cuentas de fondeo.</span>
         <span>
           <a href={waLink} rel="noopener">WhatsApp</a>
-          &nbsp;·&nbsp;
-          <a href={PORTFOLIO_URL} rel="noopener">Portfolio general de desarrollo</a>
+          {PORTFOLIO_LIVE && (
+            <>
+              &nbsp;·&nbsp;
+              <a href={PORTFOLIO_URL} rel="noopener">Portfolio general de desarrollo</a>
+            </>
+          )}
         </span>
       </div>
     </footer>
